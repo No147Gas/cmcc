@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>框架集成测试</title>
+		<style type="text/css">
+	    	div{
+	    		border: solid 3px
+	    	}
+		</style>
+	</head>
+	<body>
+			<div style="height:50px;width:100%">
+				<iframe src="title.html">title.html</iframe>	
+			</div>
+			<div style="height:100%;width:20%;float: left;">
+     			<iframe src="contents.html">contents.html</iframe>
+			</div>
+			<div id="MyPage" style="height:100%;float: right;">
+				MyPage
+			</div>
+	</body>
+</html>
