@@ -1,0 +1,290 @@
+</html><!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+		<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			var num, pd;
+			function register() {
+				num = document.getElementById("num").value;
+				pd = document.getElementById("pd").value;
+				if(!num) {
+					alert("请输入学号！");
+					document.getElementById("myForm").reset();
+				} else if(!pd) {
+					alert("请输入密码！");
+					document.getElementById("myForm").reset();
+				} else if(document.getElementById("pd2").value != pd) {
+					alert("两次输入密码不匹配！");
+					document.getElementById("myform").reset();
+				} else alert("注册成功！");
+			}
+
+			function check() {
+				if(document.getElementById("num1").value == num) {
+					if(document.getElementById("pd1").value == pd)
+					//window.open('home.html');
+						return fanye(3);
+					else alert("密码不正确");
+				} else alert("用户名不存在");
+			}
+
+			$(document).ready(function() {
+				$("#d2").hide();
+				$("#d3").hide();
+				$("#d4").hide();
+				$("#d5").hide();
+				$("#d6").hide();
+				$("#huadong").animate({
+					top: '80%'
+				});
+			});
+
+			function sw(a) {
+				window.w = a;
+				return fanye(5);
+			}
+
+			function fanye(vs) {
+				$("#back").fadeTo("slow", 0.4);
+				$("#d1").hide();
+				$("#d2").hide();
+				$("#d3").hide();
+				$("#d4").hide();
+				$("#d5").hide();
+				$("#d6").hide();
+				if(vs == 1) {
+					$("#d1").fadeIn();
+				}
+				if(vs == 2) {
+					$("#d1").hide();
+					$("#d2").fadeIn();
+				}
+				if(vs == 3) {
+					$("#d2").hide();
+					$("#d3").fadeIn();
+				}
+				if(vs == 4) {
+					$("#d3").hide();
+					$("#d4").fadeIn();
+				}
+				if(vs == 5) {
+					$("#d4").hide();
+					$("#d5").fadeIn();
+				}
+				if(vs == 6) {
+					$("#d5").hide();
+					$("#d6").fadeIn();
+					alert(w);
+					switch(w) {
+						case 1:
+							document.getElementById("xianshi").innerHTML = ("性格分析：你的外在和内在反差很大，你可静可动，可虚可实，你很会看情况做事，你常常让人摸不着头绪，你甚至有很强的第六感，可以注意到细节内可能会发生的情况，是团体中不可缺少的灵魂决策者，你也有很高的应变力，可以木讷也可以很热情，延展性很强。<br>感情分析：你最重视的是两人的兴趣和感觉合不合，你比较欣赏重视自己工作，拥有自己专业能力的异性，希望对方不管是人事物都要有一番鉴赏的品味，对事物持有敏感性，心思单纯、外在行为成熟，这样简单不浮夸的人，才是最适合与你一起厮守终生的人。");
+							break;
+						case 2:
+							document.getElementById("xianshi").innerHTML = ("性格分析：你是一个很善于意会的人，好像能看透每个人，朋友有困惑也会主动找你诉苦，你是一个很有情感洞察力的人，在各种场合中，总是能随和地展现自我，善解人意，看尽人心，游刃有余，是一个很好的聆听者以及情感开导者，暖暖的，非常能看透人心。<br>感情分析：你在爱情的表现上显得有点笨扭，常在喜欢的人面前就会装出一副很坚强的样子，这样喜欢逞强的你，正需要一个比你强悍、可靠的伴侣，最好是那种带点粗鲁，但性格开朗又成熟懂事的人，最适合你，让你不必再逞强，彼此相容相辅，你们就如天雷勾动地火一样，简直绝配到不行，幸福到老。");
+							break;
+						case 3:
+							document.getElementById("xianshi").innerHTML = ("性格分析：你具有多面性的人格，是一个思想丰富的人，但是你很能隐藏自己，只会在适当时机展露自己的本能，神秘又极具吸引力，除此之外，你是一个直率的人，随和又重义气，也是一个能为自己所爱的人受苦受难也在所不惜的人。<br>感情分析：你是一个很容易一头栽进所爱里的人，这样的你需要一个可以尊重你的兴趣和工作，百分之百支援你的伴侣，你虽然渴望两人幸福的依偎，但你也不喜欢老是天天腻在一起，希望彼此能保有适当的空间，所以具有这种成熟胸怀的人，一个弹性一个理解，一个呼应一个体贴，是最适合与你厮守终生的人。");
+							break;
+						case 4:
+							document.getElementById("xianshi").innerHTML = ("性格分析：你有着双重的性格，忽冷忽热，喜欢一个人沉静思考的感受，也喜欢与大家同乐，你有时候会让人猜不透你在想些什么，具有着一些神秘感，让人摸不着抓不到又想试探，你很能够专注在某一件事理上，不管是生活上还是感情上，虽然有时作风上看似有些叛逆，但其实很能带给人安定感，不自觉让人感到信任。<br>感情分析：你最重视的是两人的兴趣和感觉合不合，你比较欣赏重视自己工作，拥有自己专业能力的异性，希望对方不管是人事要有一番鉴赏......");
+							break;
+					}
+				}
+
+			}
+		</script>
+		<title>还没想好</title>
+		<style type="text/css">
+				body {
+				background: url(xinxin.jpg);
+		</style>
+	</head>
+
+	<body>
+		<!--栅格-->
+		<div class="row">
+			<div class="col-lg-2"></div>
+			<div class="col-lg-8">
+				<img id="back" src="gudu.jpg" width="100%" />
+				<!--首页-->
+				<div id="d1">
+
+					<p style="color:#FFF;font-size:20pt;font-family: 楷体;position:absolute;right:20%;top:30%">
+						我住的城市不曾下雪<br>&nbsp&nbsp记忆却堆满冷的感觉</p>
+					<button id="huadong" type="button" class="btn btn-primary" onclick="fanye(2)" style="position:absolute;right:10%;top:60%">点击这里测试你的故事</button>
+				</div>
+
+				<!--第一页-->
+				<div style="position:absolute;top:10%" id="d2">
+					<div class="col-lg-7">
+						<h1 style="color: #FFFFFF;">要不咱先注个册？</h1><br /><br /><br />
+						<h6 style="color: red;">本网页由世纪佳缘友情5毛赞助</h6>
+					</div>
+					<div class="col-lg-5">
+						<div class="panel-body">
+							<form class="bs-example bs-example-form" role="form" onsubmit="check()">
+								<div class="input-group" style="padding: 20px 10px 10px 10px;">
+									<span class="input-group-addon">学号</span>
+									<input type="text" id="num1" name="num1" class="form-control" placeholder="您的学号">
+								</div>
+								<div class="input-group" style="padding: 10px 10px 10px 10px;">
+									<span class="input-group-addon">密码</span>
+									<input type="password" id="pd1" name="pd1" class="form-control" placeholder="至少6位">
+								</div>
+
+								<div class="input-group" style="padding: 10px 10px 20px 10px;">
+									<span class="input-group-addon">类型</span>
+									<select class="form-control">
+										<option>您的用户类型</option>
+										<option>可爱还单身蓝孩纸♂</option>
+										<option>可爱还单身女孩纸♀</option>
+										<option>应该被烧死热恋中</option>
+										<option>阿弥陀佛</option>
+									</select>
+								</div>
+							</form>
+							<div class="text-center">
+								<a type="button" onclick="check()" class="btn btn-primary">无情登陆</a>
+								<a type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">乖乖注册</a>
+								<a type="button" class="btn btn-default" onclick="alert('/(ㄒoㄒ)/~~忘了我也没办法')">忘记密码</a>
+								<a type="button" class="btn btn-danger" onclick="alert('(╯‵□′)╯︵┻━┻不给进')">偏不注册</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div style="position:absolute;top:10%;left: 30px;" id="d3">
+
+					<h1 style="color: #FFFFFF;">下面几种狗，你会选择哪一种与你作伴？</h1>
+					<br />
+					<div style="color: #FFFFFF;font-size: 25px;">
+						<div class="radio">
+							<label>
+    				<input  type="radio" name="optionsRadios" id="optionsRadios1" value="option1" >土狗<br /> 				  
+    					<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">牛头犬<br />
+    					<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">哈士奇<br />
+    					<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">金毛<br />
+    					<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">单身狗<br />
+    					<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">萨摩耶
+					</div>
+					<div class="container" style="text-align: center;">
+						<button type="button" class="btn btn-primary" onclick="fanye(4)">确&nbsp;&nbsp;定</button>
+					</div>
+					</div><br><br/>
+
+				</div>
+
+				<div style="position:absolute;top:10%" id="d4">
+					<div class="container" style="text-align: center;">
+						<img src="p30181446.jpg" /><br /><br /><br />
+						<div class="btn-group">
+							<button id="sw" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        						选择你的答案<span class="caret"></span>
+    						</button>
+							<ul class="dropdown-menu">
+								<li>
+									<a onclick="sw(1)"> 1</a>
+								</li>
+								<li>
+									<a onclick="sw(2)"> 2</a>
+								</li>
+								<li>
+									<a onclick="sw(3)"> 3</a>
+								</li>
+								<li>
+									<a onclick="sw(4)"> 4</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+
+				<div style="position:absolute;top:10%" id="d5">
+					<h1 style="color: floralwhite;"> 选择你相对比较中意的类型</h1>
+					<div    id="myCarousel" class="carousel slide">
+						<!-- 轮播（Carousel）指标 -->
+						<ol class="carousel-indicators">
+							<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+							<li data-target="#myCarousel" data-slide-to="1"></li>
+							<li data-target="#myCarousel" data-slide-to="2"></li>
+						</ol>
+						<!-- 轮播（Carousel）项目 -->
+						<div  class="carousel-inner">
+							<div  class="item active">
+								<img style="width:100%;" src="liyuchun.jpg"  alt="First slide">
+							</div>
+							<div class="item">
+								<img style="width:100%;" src="bili.jpg"  alt="Second slide">
+							</div>
+							<div class="item">
+								<img style="width:100%;" src="fengjie.jpg"  alt="Third slide">
+							</div>
+						</div>
+						<!-- 轮播（Carousel）导航 -->
+						<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+						<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+					</div>
+					<br /><br />
+					<div class="container" style="text-align: center;">
+						<button type="button" class="btn btn-primary" onclick="fanye(6)">嗯（捂脸）</button>
+					</div>
+				</div>
+				
+				<div style="position:absolute;top:10%" id="d6">
+					<h1 style="color: #FFFFFF;">缘来你是介样的银~：</h1>
+                    <p  id="xianshi" style="color: floralwhite;font-size: 30px;">没显示出来
+                    </p>
+                    <div class="container" style="text-align: center;">
+						<button type="button" class="btn btn-primary" onclick="fanye(3)">再来一次~</button>
+				</div>
+				</div>
+				
+			</div>
+			<div class="col-lg-2"></div>
+		</div>
+
+		<!--模态框-->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="text-center" id="myModalLabel">用户注册</h4>
+					</div>
+
+					<form class="bs-example bs-example-form" id="myform" role="form" method="post" onsubmit="register()">
+						<img style="padding: 20px 60px 10px 60px;width: 100%;" src="http://www.dxs518.cn/uploads/allimg/15/22735-150Q3103051364.jpg" />
+						<div class="input-group" style="padding: 20px 50px 10px 50px;">
+							<span class="input-group-addon">学号</span>
+							<input type="text" id="num" name="num" class="form-control" placeholder="您的学号">
+						</div>
+						<div class="input-group" style="padding: 10px 50px 10px 50px;">
+							<span class="input-group-addon">密码</span>
+							<input type="password" id="pd" name="pd" class="form-control" placeholder="至少6位">
+						</div>
+						<div class="input-group" style="padding: 10px 50px 10px 50px;">
+							<span class="input-group-addon">确认</span>
+							<input type="password" id="pd2" name="pd2" class="form-control" placeholder="请再一次输入您的密码">
+						</div>
+						<div class="input-group" style="padding: 10px 50px 10px 50px;">
+							<span class="input-group-addon">所属</span>
+							<input type="text" class="form-control" placeholder="您的部门或学院">
+						</div>
+						<div class="modal-footer" style="text-align: center;">
+							<input type="submit" onclick="register()" value="提交" class="btn btn-primary" data-dismiss="modal">
+							</input>
+							<input type="button" value="取消" class="btn btn-default" data-dismiss="modal">
+							</input>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		</div>
+	</body>
+
+</html>
