@@ -7,23 +7,198 @@
 		<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 		<script src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 		<script type="text/javascript">
-			var n=document.body.clientHeight;
-			alert(n);
+			var num, pd;
 
+			function register() {
+				num = document.getElementById("num").value;
+				pd = document.getElementById("pd").value;
+				if(!num) {
+					alert("请输入学号！");
+					document.getElementById("myForm").reset();
+				} else if(!pd) {
+					alert("请输入密码！");
+					document.getElementById("myForm").reset();
+				} else if(document.getElementById("pd2").value != pd) {
+					alert("两次输入密码不匹配！");
+					document.getElementById("myform").reset();
+				} else alert("注册成功！");
+			}
+
+			function check() {
+				if(document.getElementById("num1").value == num) {
+					if(document.getElementById("pd1").value == pd)
+					//window.open('home.html');
+						window.location.href = 'home.html?' + num;
+					else alert("密码不正确");
+				} else alert("用户名不存在");
+			}
+
+			$(document).ready(function() {
+				$("#2012").hide();
+				$("#2013").hide();
+				$("#2014").hide();
+				$("#2015").hide();
+			});
+
+			function checkField(val) {
+				var vs = val
+				if(vs == 2012) {
+					$("#2012").fadeIn();
+					$("#2013").hide();
+					$("#2014").hide();
+					$("#2015").hide();
+				}
+				if(vs == 2013) {
+					$("#2012").hide();
+					$("#2013").fadeIn();
+					$("#2014").hide();
+					$("#2015").hide();
+				}
+				if(vs == 2014) {
+					$("#2012").hide();
+					$("#2013").hide();
+					$("#2014").fadeIn();
+					$("#2015").hide();
+				}
+				if(vs == 2015) {
+					$("#2012").hide();
+					$("#2013").hide();
+					$("#2014").hide();
+					$("#2015").fadeIn();
+				}
+			}
 		</script>
 		<title>还没想好</title>
 		<style type="text/css">
-			div#d1{ background-image: url(benbenla-04d.jpg);width:100%;height:800px}
+			div#d1 {
+				background-image: url(benbenla-04d.jpg);
+				width: 100%;
+				height: 800px
+			}
 		</style>
 	</head>
+
 	<body>
-        <div id="d1">
-        <p style="color:#FFF;font-size:20pt;font-family: 楷体;position:absolute;left:20%;top:40%">
-        	我住的城市不曾下雪<br>&nbsp&nbsp记忆却堆满冷的感觉</p>
-    	</div>
-    	<div id="d2">
-      <p>123<br>wodetian</p>
-      <img src="benbenla-04d.jpg"  style="width:100% height:100%"/>
-    	</div>
+		<!--
+        	栅格
+        -->
+		<div class="row">
+			<div class="col-lg-2"></div>
+			<div class="col-lg-8">
+				<!--
+        	首页
+        -->
+				<div id="d1">
+					<p style="color:#FFF;font-size:20pt;font-family: 楷体;position:absolute;left:20%;top:40%">
+						我住的城市不曾下雪<br>&nbsp&nbsp记忆却堆满冷的感觉</p>
+
+				</div>
+
+				<!--
+        	第一页
+        -->
+				<div id="d2">
+					<div class="panel-body">
+						<form class="bs-example bs-example-form" role="form" onsubmit="check()">
+							<div class="input-group" style="padding: 20px 10px 10px 10px;">
+								<span class="input-group-addon">学号</span>
+								<input type="text" id="num1" name="num1" class="form-control" placeholder="您的学号">
+							</div>
+							<div class="input-group" style="padding: 10px 10px 10px 10px;">
+								<span class="input-group-addon">密码</span>
+								<input type="password" id="pd1" name="pd1" class="form-control" placeholder="至少6位">
+							</div>
+
+							<div class="input-group" style="padding: 10px 10px 20px 10px;">
+								<span class="input-group-addon">类型</span>
+								<select class="form-control">
+									<option>您的用户类型</option>
+									<option>可爱还单身蓝孩纸♂</option>
+									<option>可爱还单身女孩纸♀</option>
+									<option>应该被烧死热恋中</option>
+									<option>阿弥陀佛</option>
+								</select>
+							</div>
+
+						</form>
+						<div class="text-center">
+							<a type="button" onclick="check()" class="btn btn-primary">无情登陆</a>
+							<a type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">乖乖注册</a>
+							<a type="button" class="btn btn-default" onclick="alert('/(ㄒoㄒ)/~~忘了我也没办法')">忘记密码？</a>
+						</div>
+					</div>
+
+				</div>
+
+				<div id="d3">
+					<div class="radio">
+						<label>
+    				<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" >选项 1
+  				</label>
+					</div>
+					<div class="radio">
+						<label>
+    					<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">选项 2
+  					</label>
+					</div><br><br />
+
+				</div>
+
+				<div id="d4">
+					<div class="container" style="text-align: center;">
+						<button type="button" class="btn btn-primary" onclick="">可耻的确定</button>
+					</div>
+				</div>
+				<div id="d5">
+
+				</div>
+			</div>
+			<div class="col-lg-2"></div>
+		</div>
+
+		<!--模态框-->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                  &times;
+            </button>
+						<h4 class="text-center" id="myModalLabel">
+                               用户注册
+            </h4>
+					</div>
+
+					<form class="bs-example bs-example-form" id="myform" role="form" method="post" onsubmit="register()">
+						<img style="padding: 20px 60px 10px 60px;width: 100%;" src="http://www.dxs518.cn/uploads/allimg/15/22735-150Q3103051364.jpg" />
+						<div class="input-group" style="padding: 20px 50px 10px 50px;">
+							<span class="input-group-addon">学号</span>
+							<input type="text" id="num" name="num" class="form-control" placeholder="您的学号">
+						</div>
+						<div class="input-group" style="padding: 10px 50px 10px 50px;">
+							<span class="input-group-addon">密码</span>
+							<input type="password" id="pd" name="pd" class="form-control" placeholder="至少6位">
+						</div>
+						<div class="input-group" style="padding: 10px 50px 10px 50px;">
+							<span class="input-group-addon">确认</span>
+							<input type="password" id="pd2" name="pd2" class="form-control" placeholder="请再一次输入您的密码">
+						</div>
+
+						<div class="input-group" style="padding: 10px 50px 10px 50px;">
+							<span class="input-group-addon">所属</span>
+							<input type="text" class="form-control" placeholder="您的部门或学院">
+						</div>
+						<div class="modal-footer" style="text-align: center;">
+							<input type="submit" onclick="register()" value="提交" class="btn btn-primary" data-dismiss="modal">
+							</input>
+							<input type="button" value="取消" class="btn btn-default" data-dismiss="modal">
+							</input>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		</div>
 	</body>
-	</html>
+
+</html>
