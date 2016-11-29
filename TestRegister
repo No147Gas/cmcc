@@ -157,7 +157,7 @@
       
       	
       <div class="input-group" style="padding: 10px 50px 10px 50px;">
-         <span class="input-group-addon">所属</span>
+         <span class="input-group-addon">所 属</span>
          <input type="text" class="form-control" placeholder="您的部门或学院">
       </div>
       <div class="input-group" style="padding: 10px 50px 50px 50px;">
