@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<link href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+		<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+		<title>华中师范大学考试管理系统</title>
+		<script type="text/javascript">
+			var num = window.location.search.substring(1);
+			var t = setTimeout(" alert('你好！'+num+'欢迎进入XX大学考试管理系统！')", 2000);
+		</script>
+		<style>
+		@media only screen and (max-width: 1200px) {
+    #l{
+        z-index:2;
+        background-color: #000;
+     }
+    #r{
+    	position: absolute;
+    	right: 1px;
+    	top: 1px;
+    }
+    iframe{
+          width: 80%;
+    }
+  
+    }
+
+		</style>
+	</head>
+
+	<body>
+		<div class="row">
+			<div class="col-lg-2"></div>
+			<div class="col-lg-8">
+				<iframe src="navbar.html" scrolling="no" frameborder="0" width="100%" height=190></iframe>
+				<div class="row">
+					<div id="l" class="col-lg-2">
+						<div style="width:140px;  position:fixed;top:190px;">
+							<ul class="nav nav-pills nav-stacked" style="border-color: beige; border-style: dotted;">
+
+								<li class="active"><a href="home.html">考试主页</a></li>
+								<li><a href="Mytest.html">我的考试</a></li>
+								<li><a href="Testroom.html">考场信息</a></li>
+								<li><a href="Syllabus.html">课程安排</a></li>
+								<li><a href="Document.html">资料管理</a></li>
+								<li><a href="Register.html">退出登录</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-8">
+						<div>
+							<img style="width: 100%;" src="http://www.ccnu.edu.cn/resources/images/banner01.png" />
+							<div style="position:absolute; z-index:2; left:21px; top:1px">
+							
+								<h1 class="text-primary">
+									<script>
+										document.write("欢迎！"+num);
+									</script>
+								</h1>
+							</div>
+						</div>
+						<hr>
+
+						<div>
+							<table class="table table-hover">
+								<h1 class="text-primary">XX新闻<small> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;更多新闻请访问XX在线</small></h1>
+								<tbody>
+									<tr>
+										<td>2016-09-29</td>
+										<td>XX大学奖励优秀推免生的政策公告&nbsp;&nbsp;<span class="badge">置顶</span></td>
+									</tr>
+									<tr>
+										<td>2016-09-16</td>
+										<td>华中师范大学2016年教师高级岗位招聘公告&nbsp;&nbsp;<span class="badge">置顶</span></td>
+									</tr>
+									<tr>
+										<td>2016-10-09 </td>
+										<td>关于举办首届全国高校图书馆阅读推广案例大赛 全国总决赛的通知</td>
+									</tr>									
+                  <tr>
+										<td>2016-09-30</td>
+										<td>关于开展2015年学校信息化应用自主科研项目立项工作的通知 </td>
+									</tr>
+									<tr>
+										<td>2016-09-30</td>
+										<td>关于文科楼（一期）项目施工现场封闭的通知 </td>
+									</tr>
+									<tr>
+										<td>2016-09-28</td>
+										<td>关于召开科研财务工作座谈会的通知 </td>
+									</tr>
+								</tbody>
+
+							</table>
+						</div>
+						<hr>
+
+						<div class="row">
+							<div class="col-lg-6">
+								<h1 class="text-primary">考场信息</h1>
+								<input onclick="change2()" id="two" style="width: 100%;" class="img-thumbnail" type="image" height="200" width="250" src="http://p14.go007.com/2014_10_22_19/3313bff54f2d7243_0.jpg" data-toggle="modal" data-target="#bigimg2"></input>
+							</div>
+							<div class="col-lg-6">
+								<input onclick="change1()" id="one" style="width: 100%;" class="img-thumbnail" type="image" height="300" width="250" src="http://www.ynpxrz.com/upload/201301/04/0214202970.png" data-toggle="modal" data-target="#bigimg1" />
+							</div>
+						</div>
+
+						<div>
+							<h1 class="text-primary">课程安排</h1>
+							<img style="width: 100%;" src="http://p12.qhimg.com/dr/360_210_/t016401edede2712ebd.jpg" />
+						</div>
+						<hr>
+						<div align="center">
+							<ul class="pagination">
+								<li><a href="#">&laquo;</a></li>
+								<li class="disabled"><a href="#">1</a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">4</a></li>
+								<li><a href="#">5</a></li>
+								<li><a href="#">&raquo;</a></li>
+							</ul>
+						</div>
+
+					</div>
+					<div id="r" class="col-lg-2">
+						<div style="width:140px;  position:relative;top:1px;">
+							<div>
+								<script language=JavaScript>
+									today = new Date();
+
+									function initArray() {
+										this.length = initArray.arguments.length
+										for (var i = 0; i < this.length; i++)
+											this[i + 1] = initArray.arguments[i]
+									}
+									var d = new initArray("星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六");
+									document.write("<font color=#333 style='font-size:18pt;font-family: 宋体'> ", today.getFullYear(), "年", today.getMonth() + 1, "月", today.getDate(), "日", d[today.getDay() + 1], "</font>");
+								</script>
+							</div>
+
+							<ul class="list-group">
+								<li class="list-group-item">华大在线</li>
+								<li class="list-group-item">校历</li>
+								<li class="list-group-item">黄页</li>
+								<li class="list-group-item">
+									<span class="badge">新</span> 图书馆
+								</li>
+								<li class="list-group-item">校园地图</li>
+
+							</ul>
+						</div>
+					</div></div>
+					<div class="modal-footer">
+						<div class="text-center" style="padding-top: 100px ">
+							<hr> ©2015CCNU
+							<a href="http://www.ccnu.edu.cn">www.ccnu.edu.cn</a>XX大学考试管理中心
+						</div>
+						</div>
+
+				
+				</div>
+			</div>
+			<div class="col-lg-2"></div>
+		</div>
+
+		<div class="modal fade" id="bigimg1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<img src="http://www.ynpxrz.com/upload/201301/04/0214202970.png" style=margin-left:10px ;/>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="bigimg2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<img height="600" width="800" src="http://p14.go007.com/2014_10_22_19/3313bff54f2d7243_0.jpg" style=margin-left:10px ;/>
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>
